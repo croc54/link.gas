@@ -1,36 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Apps Dashboard</title>
-  <style>
-    body{font-family:sans-serif;text-align:center;padding:40px}
-    a{
-      display:block;
-      margin:15px auto;
-      padding:12px;
-      width:250px;
-      background:#4CAF50;
-      color:white;
-      text-decoration:none;
-      border-radius:6px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Dashboard</title>
+
+<style>
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,sans-serif;
+  background:#f4f6f9;
+  color:#333;
+}
+
+header{
+  background:#1e293b;
+  color:white;
+  padding:20px;
+  text-align:center;
+  font-size:22px;
+  font-weight:600;
+}
+
+.container{
+  max-width:900px;
+  margin:40px auto;
+  padding:0 20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+  transition:0.2s;
+  text-decoration:none;
+  color:inherit;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 18px rgba(0,0,0,0.12);
+}
+
+.title{
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:8px;
+}
+
+.desc{
+  font-size:14px;
+  color:#666;
+}
+
+footer{
+  text-align:center;
+  margin:40px 0;
+  font-size:13px;
+  color:#888;
+}
+</style>
 </head>
+
 <body>
 
-<h2>My Apps</h2>
+<header>
+  WB Health Tools Dashboard
+</header>
 
-<a href="https://script.google.com/macros/s/AKfycbx123/exec" target="_blank">
-  Patient Manager
-</a>
+<div class="container">
+  <div class="grid">
 
-<a href="https://script.google.com/macros/s/AKfycbx456/exec" target="_blank">
-  MO Placement DSS
-</a>
+    <a class="card" href="https://script.google.com/macros/s/AKfycbwBy_JEzGFtlL8VHlvyzd43OewWxAu72glA-t7vcCz0jdUI2wMweUl6vpKx4JtkdX_t/exec" target="_blank">
+      <div class="title">Primary & Secondary Tier HR Status Collection</div>
+      <div class="desc">Submit and review HR data from primary and secondary facilities.</div>
+    </a>
 
-<a href="https://script.google.com/macros/s/AKfycbx789/exec" target="_blank">
-  Certificate Generator
-</a>
+    <a class="card" href="https://script.google.com/macros/s/AKfycbyr4h7j6Z7GaFtY7KnZhOPM5Dfdin6ZSvpSIbiGrsYUuKvH9SNDfjCMiuIfcTkQ_cTL/exec" target="_blank">
+      <div class="title">Detailed MO Supply & Working Statement</div>
+      <div class="desc">Upload monthly working statements of Detailed MO (Supy)</div>
+    </a>
+
+    <a class="card" href="https://script.google.com/macros/s/AKfycbxJVCj1ytSCe4oYVP9T8FgcF17HnCkCFgkvkxzEYXDo1ONf-tYq6sKlABkmHbHGbPFn/exec" target="_blank">
+      <div class="title">WBPHAS In-Position Officers Portal</div>
+      <div class="desc">Update current posting and status of WBPHAS officers.</div>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  Internal Dashboard • Department Use Only
+</footer>
 
 </body>
 </html>
