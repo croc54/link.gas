@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Health Dashboard</title>
 
 <style>
@@ -97,10 +100,21 @@ footer{
 
   </div>
 </div>
+<button onclick="forceReload()" 
+style="position:fixed;bottom:20px;right:20px;padding:10px 14px;border:none;border-radius:8px;background:#1e293b;color:white;cursor:pointer;">
+  Refresh Page
+</button>
 
 <footer>
   Internal Dashboard • Department Use Only
 </footer>
+<script>
+  function forceReload(){
+    const base = window.location.origin + window.location.pathname;
+    const t = new Date().getTime();
+    window.location.href = base + "?t=" + t;
+  }
+</script>
 
 </body>
 </html>
